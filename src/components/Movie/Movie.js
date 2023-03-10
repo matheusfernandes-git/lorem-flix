@@ -1,13 +1,13 @@
 import { AiFillCloseCircle } from 'react-icons/ai'; /*Importanto o icone de deletar*/
 import './Movie.css'
 
-const Movie = ({ name, img, year, backgroundColor, whenDelete, props}) => {
+const Movie = ({ name, img, year, backgroundColor, whenDelete,}) => {
     return (
     <div className='movie'>
         <AiFillCloseCircle 
             size={25}
             className='delete'
-            onClick={() => whenDelete(props.id)}
+            onClick={() => whenDelete()}
         />
         <div className='cabecalho' style={{ backgroundColor: backgroundColor }}>
             <img src={img} alt={name}/>

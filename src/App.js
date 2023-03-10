@@ -52,8 +52,8 @@ function App() {
     setMovies([...movies, movie])
   }
 
-  function deleteMovie(id){
-    setMovies(movies.filter(movie => movie.id !== id));
+  function deleteMovie(event){
+    setMovies(movies)
   }
 
   function changeMovieColor(color, name){
