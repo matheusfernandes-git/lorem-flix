@@ -9,9 +9,10 @@
 }
 .movie img {
     width: 100px;
-    border-radius: 50%;
+    border-radius: 30%;
     position: relative;
     bottom: -50px;
+    padding: 10px;
 }
 
 .movie .footer {
@@ -23,7 +24,7 @@
 }
 
 .movie .footer h4 {
-    color: #6278F7;
+    color: #E50914;
     font-size: 18px;
     line-height: 22px;
     font-weight: bold;

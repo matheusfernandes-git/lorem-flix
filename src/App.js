@@ -3,44 +3,45 @@ import Banner from './components/Banner/Banner';
 import Footer from './components/Footer/Fotter';
 import Form from './components/Form/Form';
 import MoviesList from './components/MoviesList/MoviesList';
+import { v4 as uuidv4 } from 'uuid';  /*Importando um id aleatório pra passar nas keys*/
 
 function App() {
 
   const [moviesCard, setMoviesCard] = useState([
     {
+      id: uuidv4(),
       name: 'Terror',
-      primaryColor: '#3B3936',
-      secondaryColor: '#FF4858'
+      color: '#FF4858'
     },
     {
+      id: uuidv4(),
       name: 'Comédia',
-      primaryColor: '#FFBA05',
-      secondaryColor: '#FFF5D9'
+      color: '#FFF5D9'
     },
     {
+      id: uuidv4(),
       name: 'Romance',
-      primaryColor: '#E06B69',
-      secondaryColor: '#FDE7E8'
+      color: '#FDE7E8'
     },
     {
+      id: uuidv4(),
       name: 'Ação',
-      primaryColor: '#878787',
-      secondaryColor: '#CACACA'
+      color: '#CACACA'
     },
     {
+      id: uuidv4(),
       name: 'Aventura',
-      primaryColor: '#57C278',
-      secondaryColor: '#D9F7E9'
+      color: '#D9F7E9'
     },
     {
+      id: uuidv4(),
       name: 'Drama',
-      primaryColor: '#FFBA05',
-      secondaryColor: '#FFF5D9'
+      color: '#FFF5D9'
     },
     {
+      id: uuidv4(),
       name: 'Ficção científica',
-      primaryColor: '#FF8A29',
-      secondaryColor: '#FFEEDF'
+      color: '#FFEEDF'
     }
   ])
 
@@ -51,14 +52,14 @@ function App() {
     setMovies([...movies, movie])
   }
 
-  function deleteMovie(){
-
+  function deleteMovie(id){
+    setMovies(movies.filter(movie => movie.id !== id));
   }
 
   function changeMovieColor(color, name){
     setMoviesCard(moviesCard.map(card => {
-      if(card.name === name){
-        card.primaryColor = color;
+      if(card.name === name){      /*O certo é passar o id aleatório.*/
+        card.color = color;
       }
       return card;
     }))
@@ -74,8 +75,7 @@ function App() {
           changeColor={changeMovieColor}
           key={card.name} 
           name={card.name} 
-          primaryColor={card.primaryColor} 
-          secondaryColor={card.secondaryColor} 
+          color={card.color} 
           movie={movies.filter(movie => movie.gener === card.name)}
           whenDelete={deleteMovie}
         />

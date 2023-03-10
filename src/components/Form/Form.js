@@ -40,6 +40,7 @@ const Form = (props) => {
                     whenChange={valor => setName(valor)}
                 />
                 <TextFild
+                    min='0'
                     type='number'
                     required={true}
                     label="Ano"
