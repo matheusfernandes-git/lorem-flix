@@ -6,7 +6,7 @@ import MoviesList from './components/MoviesList/MoviesList';
 
 function App() {
 
-  const moviesCard = [
+  const [moviesCard, setMoviesCard] = useState([
     {
       name: 'Terror',
       primaryColor: '#3B3936',
@@ -42,7 +42,7 @@ function App() {
       primaryColor: '#FF8A29',
       secondaryColor: '#FFEEDF'
     }
-  ]
+  ])
 
   const [movies, setMovies] = useState([])
 
@@ -51,18 +51,35 @@ function App() {
     setMovies([...movies, movie])
   }
 
+  function deleteMovie(){
+
+  }
+
+  function changeMovieColor(color, name){
+    setMoviesCard(moviesCard.map(card => {
+      if(card.name === name){
+        card.primaryColor = color;
+      }
+      return card;
+    }))
+  }
+
   return (
     <div className="App">
       <Banner />
       <Form moviesName={moviesCard.map(card => card.name)} whenRegistered={movie => addNewMovie(movie)}/>
 
-      {moviesCard.map(card => <MoviesList
-        key={card.name} 
-        name={card.name} 
-        primaryColor={card.primaryColor} 
-        secondaryColor={card.secondaryColor} 
-        movie={movies.filter(movie => movie.gener === card.name)}
-      />)}   
+      {moviesCard.map(card => 
+        <MoviesList
+          changeColor={changeMovieColor}
+          key={card.name} 
+          name={card.name} 
+          primaryColor={card.primaryColor} 
+          secondaryColor={card.secondaryColor} 
+          movie={movies.filter(movie => movie.gener === card.name)}
+          whenDelete={deleteMovie}
+        />
+      )}   
 
       <Footer/>
 

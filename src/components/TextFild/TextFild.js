@@ -3,7 +3,7 @@ import './TextFild.css'
 const TextFild = (props) => {
 
     const placeholderModificada = `${props.placeholder}...` 
-
+    
     const whenTyped = (event) => {
         props.whenChange(event.target.value);
     }
