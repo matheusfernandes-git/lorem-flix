@@ -4,11 +4,11 @@ import './Movie.css'
 const Movie = ({ name, img, year, backgroundColor, whenDelete,}) => {
     return (
     <div className='movie'>
-        <AiFillCloseCircle 
+        {/* <AiFillCloseCircle 
             size={25}
             className='delete'
-            onClick={() => whenDelete()}
-        />
+            onClick={() => whenDelete(movie.id)}
+        /> */}
         <div className='cabecalho' style={{ backgroundColor: backgroundColor }}>
             <img src={img} alt={name}/>
         </div>

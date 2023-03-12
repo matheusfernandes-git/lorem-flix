@@ -52,8 +52,8 @@ function App() {
     setMovies([...movies, movie])
   }
 
-  function deleteMovie(event){
-    setMovies(movies)
+  function deleteMovie(){
+    // setMovies(movies.filter(movie => movie.id !== id));
   }
 
   function changeMovieColor(color, name){
@@ -69,7 +69,6 @@ function App() {
     <div className="App">
       <Banner />
       <Form moviesName={moviesCard.map(card => card.name)} whenRegistered={movie => addNewMovie(movie)}/>
-
       {moviesCard.map(card => 
         <MoviesList
           changeColor={changeMovieColor}
@@ -82,7 +81,6 @@ function App() {
       )}   
 
       <Footer/>
-
     </div>
   );
 }

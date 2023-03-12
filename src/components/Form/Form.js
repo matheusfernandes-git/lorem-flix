@@ -27,7 +27,6 @@ const Form = (props) => {
         setGener('')
     }
 
-
     return (
         <section className="form">
             <form onSubmit={whenSave}>

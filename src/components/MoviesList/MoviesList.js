@@ -10,7 +10,7 @@ const MoviesList = (props) => {
             <h3 style={{ borderColor: props.color }}>{props.name}</h3>
             <div className='movies'>
                 {props.movie.map(movie => {
-                    return <Movie backgroundColor={props.color} key={movie.id} name={movie.name} year={movie.year} img={movie.img} whenDelete={props.whenDelete}/>
+                    return <Movie backgroundColor={props.color} key={movie.name} name={movie.name} year={movie.year} img={movie.img} whenDelete={props.whenDelete}/>
                 })}
             </div>
         </section> 
