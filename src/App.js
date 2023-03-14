@@ -52,9 +52,9 @@ function App() {
     setMovies([...movies, movie])
   }
 
-  function deleteMovie(){
-    // setMovies(movies.filter(movie => movie.id !== id));
-  }
+  // function deleteMovie(id){
+  //   setMovies(movies.filter(movie => movie.id !== id));
+  // }
 
   function changeMovieColor(color, name){
     setMoviesCard(moviesCard.map(card => {
@@ -65,18 +65,35 @@ function App() {
     }))
   }
 
+  // function registerGender(newGender){
+  //   setMoviesCard([...moviesCard, {...newGender, id: uuidv4()}])
+  // }
+
+  // function solveFavorites(id) {
+  //   setMovies(movies.map(movie => {
+  //     if(movie.id === id) movie.favorito = !movie.favorito;
+  //     return movie;
+  //   }))
+  // }
+
   return (
     <div className="App">
-      <Banner />
-      <Form moviesName={moviesCard.map(card => card.name)} whenRegistered={movie => addNewMovie(movie)}/>
+      <Banner/>
+      <Form 
+        // registerGender={registerGender}
+        moviesName={moviesCard.map(card => card.name)} 
+        whenRegistered={movie => addNewMovie(movie)}
+      />
+
       {moviesCard.map(card => 
         <MoviesList
+          // whenFavorite={solveFavorites}
           changeColor={changeMovieColor}
           key={card.name} 
           name={card.name} 
           color={card.color} 
-          movie={movies.filter(movie => movie.gener === card.name)}
-          whenDelete={deleteMovie}
+          movie={movies.filter(movie => movie.gender === card.name)}
+          // whenDelete={deleteMovie}
         />
       )}   
 

@@ -16,10 +16,11 @@
 }
 
 .movie .footer {
+    display: block;
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
-    padding-top: 90px;
+    padding-top: 50px;
     padding-bottom: 40px;
 }
 
@@ -42,4 +43,8 @@
     right: -10px;
     top: -8px;
     cursor: pointer;
+}
+
+.favorite{
+    
 }

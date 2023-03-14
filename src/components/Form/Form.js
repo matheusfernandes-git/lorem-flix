@@ -1,5 +1,5 @@
 import "./Form.css"
-import TextFild from "../TextFild/TextFild"
+import Fild from "../Fild/Fild"
 import DropdownList from "../DropdownList/DropdownList"
 import Button from "../Button/Button"
 import { useState } from  'react'
@@ -10,7 +10,7 @@ const Form = (props) => {
     const [name, setName] = useState('')
     const [year, setYear] = useState('')
     const [img, setImg] = useState('')
-    const [gener, setGener] = useState('')
+    const [gender, setGender] = useState('')
 
     const whenSave = (event) => {
         event.preventDefault()
@@ -18,27 +18,27 @@ const Form = (props) => {
             name,
             year,
             img,
-            gener
+            gender
         })
 
         setName('')
         setYear('')
         setImg('')
-        setGener('')
+        setGender('')
     }
 
     return (
         <section className="form">
             <form onSubmit={whenSave}>
                 <h2>Preencha os dados para criar o card do filme/série</h2>
-                <TextFild 
+                <Fild 
                     required={true}
                     label="Nome"
                     placeholder="Digite o nome do filme" 
                     value={name}
                     whenChange={valor => setName(valor)}
                 />
-                <TextFild
+                <Fild
                     min='0'
                     type='number'
                     required={true}
@@ -47,7 +47,7 @@ const Form = (props) => {
                     value={year}
                     whenChange={valor => setYear(valor)}
                 />
-                <TextFild
+                <Fild
                     label="Imagem"
                     placeholder="Digite o endereço da imagem do filme" 
                     value={img}
@@ -57,8 +57,8 @@ const Form = (props) => {
                     required={true}
                     label="Gênero" 
                     itens={props.moviesName}
-                    value={gener}
-                    whenChange={valor => setGener(valor)}
+                    value={gender}
+                    whenChange={valor => setGender(valor)}
                 />
                 <Button>
                     Criar Card
