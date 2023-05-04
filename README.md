@@ -1,4 +1,4 @@
-![imctable](https://user-images.githubusercontent.com/100592742/236352058-3b767492-777c-4a74-9738-c0775479143d.png)
+![loremflix](https://user-images.githubusercontent.com/100592742/236353278-0ece651d-2e12-4568-8dc2-37f42e45610d.png)
 <h1>LoremFlix</h1>
 <p>In this project you can add a movie with name, image, release year and gender in your movie list, and you can also change the color of your gender field.</p>
 
