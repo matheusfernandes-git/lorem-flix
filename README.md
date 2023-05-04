@@ -6,7 +6,6 @@
 <table>
   <tr>
     <td>React</td>
-    <td>HTML</td>
     <td>CSS</td>
    </tr>
    </table>
