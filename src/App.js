@@ -65,7 +65,6 @@ function App() {
   const changeMovieColor = (color, name) => {
     const filteredMoviesColor = moviesCard.map((card) => {
       if (card.name === name) {
-        /*O certo é passar o id aleatório.*/
         card.color = color;
       }
       return card;
