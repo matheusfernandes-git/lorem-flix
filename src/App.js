@@ -52,7 +52,10 @@ function App() {
 
   useEffect(() => {
     setMovies(getFromLocalStorage("movies"));
-    setMoviesCard(getFromLocalStorage("card"));
+    const savedMoviesCard = getFromLocalStorage("card");
+    if (savedMoviesCard) {
+      setMoviesCard(savedMoviesCard);
+    }
   }, []);
 
   const addNewMovie = (newMovie) => {
