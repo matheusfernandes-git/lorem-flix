@@ -4,6 +4,7 @@ import hexToRgba from "hex-to-rgba";
 
 const MoviesList = (props) => {
   const css = { backgroundColor: hexToRgba(props.color, "0.6") };
+
   return props.movie.length > 0 ? (
     <section className="movies-list" style={css}>
       <input

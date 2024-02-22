@@ -51,9 +51,10 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
+    const localStorageLength = Object.keys(localStorage).length;
     setMovies(getFromLocalStorage("movies"));
     const savedMoviesCard = getFromLocalStorage("card");
-    if (savedMoviesCard) {
+    if (localStorageLength !== 0) {
       setMoviesCard(savedMoviesCard);
     }
   }, []);
