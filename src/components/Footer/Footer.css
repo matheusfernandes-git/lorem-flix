@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Noto+Sans+Tangsa:wght@400;500&family=Poppins:wght@200;500&display=swap');
+
+.footer{
+    background: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+}
+
+.footer ul li{
+    display: inline-block;
+    margin-right: 32px;
+}
+
+.footer ul li:last-child {
+    margin-right: 0;
+}
+
+.footer h2{
+    font-family:'Bebas Neue';
+    color: #E50914;
+    font-size: 3em;
+}
+
+@media screen and (max-width: 745px){
+    .footer p{
+        display: none;
+    }
+}

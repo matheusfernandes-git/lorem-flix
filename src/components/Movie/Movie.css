@@ -1,0 +1,51 @@
+.movie {
+    position: relative;
+    width: 280px;
+}
+
+.movie .cabecalho {
+    background-color:  #F0F0F0;
+    border-radius: 10px 10px 0px 0px;
+}
+.movie img {
+    width: 100px;
+    border-radius: 30%;
+    position: relative;
+    bottom: -50px;
+    padding: 10px;
+}
+
+.movie .footer {
+    display: block;
+    background: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.movie .footer h4 {
+    color: #E50914;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+}
+
+.movie .footer h5 {
+    font-size: 18px;
+    line-height: 22px;
+    color: #212121;
+    padding: 0 16px;
+}
+
+.delete{
+    position: absolute;
+    right: -10px;
+    top: -8px;
+    cursor: pointer;
+}
+
+.favorite{
+    cursor: pointer;
+    color: #000;
+}
