@@ -51,7 +51,7 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    const localStorageLength = Object.keys(localStorage).length;
+    const localStorageLength = Object.keys(localStorage).length;  //Transforma em um array para verificar o length
     setMovies(getFromLocalStorage("movies"));
     const savedMoviesCard = getFromLocalStorage("card");
     if (localStorageLength !== 0) {
