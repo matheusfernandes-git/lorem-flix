@@ -1,5 +1,5 @@
 import "./Form.css";
-import Fild from "../Fild/Fild";
+import Field from "../Field/Field";
 import DropdownList from "../DropdownList/DropdownList";
 import Button from "../Button/Button";
 import { useState } from "react";
@@ -33,14 +33,14 @@ const Form = (props) => {
     <section className="form">
       <form onSubmit={whenSave}>
         <h2>Preencha os dados para criar o card do filme/série</h2>
-        <Fild
+        <Field
           required={true}
           label="Nome"
           placeholder="Digite o nome do filme"
           value={name}
           whenChange={(valor) => setName(valor)}
         />
-        <Fild
+        <Field
           min="0"
           type="number"
           required={true}
@@ -49,7 +49,7 @@ const Form = (props) => {
           value={year}
           whenChange={(valor) => setYear(valor)}
         />
-        <Fild
+        <Field
           label="Imagem"
           placeholder="Digite o endereço da imagem do filme"
           value={img}

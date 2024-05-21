@@ -1,15 +1,15 @@
-.fild{
+.field{
     margin: 24px 0px;
 }
 
-.fild label{
+.field label{
     display: block;
     margin-bottom: 8px;
     font-size: 24px;
     color: #FFF;
 }
 
-.fild input{
+.field input{
     background-color: #FFF;
     box-shadow: 10px 10px 30px rgba(0,0,0, 0.0);
     width: 100%;

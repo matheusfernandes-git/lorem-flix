@@ -1,13 +1,13 @@
-import "./Fild.css";
+import "./Field.css";
 
-const Fild = (props) => {
+const Field = (props) => {
   const placeholderModificada = `${props.placeholder}...`;
 
   const whenTyped = (event) => {
     props.whenChange(event.target.value);
   };
   return (
-    <div className="fild">
+    <div className="field">
       <label>{props.label}</label>
       <input
         min={props.min}
@@ -21,4 +21,4 @@ const Fild = (props) => {
   );
 };
 
-export default Fild;
+export default Field;
